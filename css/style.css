@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #777;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus, :active {
+    outline: none;
+}
+
+a:focus, a:active {
+    outline: none;
+}
+
+html, body {
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ibg {
+    position: relative;
+}
+
+.ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.section-title__title {
+    color: #222;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* ПК */
+@media (max-width: 1087px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+/* ПЛАНШЕТ */
+@media (max-width: 992.98px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+/* ТЕЛЕФОНЫ */
+@media (max-width: 767.98px) {
+    .container {
+        max-width: none;
+    }
+}
+
+/* МАЛЕНЬКИЕ ТЕЛЕФОНЫ */
+@media (max-width: 479.98px) {}
+
+/* !HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER */
+.header {
+    position: absolute;
+    width: 100%;
+    padding: 58px 0;
+    z-index: 5;
+}
+
+.header__body {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header__menu-item {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header__menu-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+@media (max-width: 767.98px) {
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+    }
+
+    .burger__center {
+        position: absolute;
+        left: 0;
+        background-color: #fed136;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        z-index: 11;
+        transition: all .3s ease 0s;
+    }
+
+    .header__burger::before,
+    .header__burger::after {
+        content: "";
+        background-color: #fed136;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        z-index: 11;
+        transition: all .3s ease 0s;
+    }
+
+    .header__burger::before {
+        bottom: 0;
+    }
+
+    .header__burger::after {
+        top: 0;
+    }
+
+    .header__burger.active::after {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .header__burger.active .burger__center {
+        transform: scale(0);
+    }
+
+    .header__burger.active::before {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .header__menu {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 150%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #FE8936;
+        z-index: 10;
+        transition-duration: .3s;
+    }
+
+    .header__menu-item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .header__menu-item {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .header__menu.active {
+        left: 50%;
+    }
+
+}
+
+/* !HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER */
+/* ?INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO   */
+.intro {
+    position: relative;
+    padding: 280px 0px 200px 0px;
+}
+
+.intro__body {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.intro__title {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.intro__title:not(:last-child) {
+    padding-bottom: 50px;
+}
+
+.intro__subtitle {
+    font-size: 4.6875rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.intro__subtitle:not(:last-child) {
+    padding-bottom: 60px;
+}
+
+.intro__btn a {
+    color: #fff;
+    font-weight: bold;
+    background-color: #fed136;
+    padding: 25px 50px;
+}
+
+
+.intro__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* ?INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO INTRO   */
+/* !SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES       */
+
+.services {
+    padding: 120px 0;
+}
+
+.info-column {
+    display: flex;
+    text-align: center;
+    gap: 85px;
+}
+
+@media (max-width: 767.98px) {
+    .info-column {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+.info-column__item {
+    flex: 1 1 33.333%;
+}
+
+.info-column__icon {
+    margin: 0 auto 25px auto;
+    width: 75px;
+    height: 75px;
+}
+
+.info-column__icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-column__title {
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.info-column__desc {
+    font-size: .875rem;
+    line-height: 1.143;
+
+}
+
+/* !SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES SERVICES       */
+
+/* ?PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO   */
+
+.portfolio{
+    background-color: #f7f7f7;
+    padding: 120px 0px;
+}
+
+.portfolio__imgs {
+}
+.img-row {
+    display: flex;
+    gap: 35px;
+}
+.img-row__item {
+    flex: 0 1 33.333%;
+    height: 300px;
+    /* width: 300px; */
+}
+
+.img-row__item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ТЕЛЕФОНЫ */
+@media (max-width: 767.98px) {
+    .img-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* ?PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO   */
