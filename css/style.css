@@ -98,29 +98,23 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 15px;
 }
 
-/* ПК */
 @media (max-width: 1087px) {
     .container {
         max-width: 970px;
     }
 }
 
-/* ПЛАНШЕТ */
 @media (max-width: 992.98px) {
     .container {
         max-width: 750px;
     }
 }
 
-/* ТЕЛЕФОНЫ */
 @media (max-width: 767.98px) {
     .container {
         max-width: none;
     }
 }
-
-/* МАЛЕНЬКИЕ ТЕЛЕФОНЫ */
-@media (max-width: 479.98px) {}
 
 /* !HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER */
 .header {
